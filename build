@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+echo "prepare..."
+rm -rf dist
+mkdir -p dist
+
+echo "building index.ls -> index.js ..."
+./node_modules/.bin/lsc -cp --no-header src/index.ls > dist/index.js
+echo "minify index.js -> index.min.js ..."
+./node_modules/.bin/uglifyjs dist/index.js -m -c > dist/index.min.js
+echo "copy ffmpeg.js/worker.js to dist ..."
+cp ffmpeg.js/worker.js dist/worker.js
+
+echo "copy dist to web ..."
+rm -rf web/static/assets/lib/@plotdb/h264.mp4/main/
+mkdir -p web/static/assets/lib/@plotdb/h264.mp4/main/
+cp -R dist/* web/static/assets/lib/@plotdb/h264.mp4/main/

@@ -1,0 +1,6 @@
+.*.swp
+.swp
+node_modules
+secret.*
+*.log
+web/static/assets/lib
