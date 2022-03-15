@@ -291,7 +291,7 @@ pug_mixins["script"]([
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
 pug_html = pug_html + "\u003Cscript type=\"module\"\u003E";
 ;pug_debug_line = 19;pug_debug_filename = "src\u002Fpug\u002Findex.pug";
-pug_html = pug_html + "(function(n){return n.apply({})})(function(){var t=this;this.ffmpeg=new ffmpeg;return this.ffmpeg.init().then(function(){var n;return t.view=n=new ldview({root:document.body,action:{change:{upload:function(n){var e,o;e=n.node;o=e.files[0];return t.ffmpeg.encoding(o).then(function(n){console.log(\"done.\");return console.log(n)})[\"catch\"](function(){return console.log(\"not supported\")})}}}})})});\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
+pug_html = pug_html + "(function(n){return n.apply({})})(function(){var e=this;this.h264=new h264;return this.h264.init().then(function(){var n;return e.view=n=new ldview({root:document.body,action:{change:{upload:function(n){var o,t;o=n.node;t=o.files[0];return e.h264.check(t).then(function(n){console.log(\"done.\");return console.log(n)})[\"catch\"](function(){return console.log(\"not supported\")})}}}})})});\u003C\u002Fscript\u003E\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
     }.call(this, "Array" in locals_for_with ?
         locals_for_with.Array :
         typeof Array !== 'undefined' ? Array : undefined, "JSON" in locals_for_with ?

@@ -1,12 +1,12 @@
 <-(->it.apply {}) _
-@ffmpeg = new ffmpeg!
-@ffmpeg.init!
+@h264 = new h264!
+@h264.init!
   .then ~>
     @view = view = new ldview do
       root: document.body
       action: change: upload: ({node}) ~>
         file = node.files.0
-        @ffmpeg.encoding(file)
+        @h264.check(file)
           .then ->
             console.log \done.
             console.log it

@@ -1,6 +1,6 @@
 (function(){
-  var ffmpeg;
-  ffmpeg = function(opt){
+  var h264;
+  h264 = function(opt){
     opt == null && (opt = {});
     this.inited = false;
     this._init = [];
@@ -14,11 +14,10 @@
     this.canvas = document.createElement('canvas');
     return this;
   };
-  ffmpeg.prototype = import$(Object.create(Object.prototype), {
-    encoding: function(file){
+  h264.prototype = import$(Object.create(Object.prototype), {
+    check: function(file){
       var fn, p, this$ = this;
       fn = file.name;
-      console.log(fn);
       p = new Promise(function(res, rej){
         var fr;
         fr = new FileReader();
@@ -135,9 +134,9 @@
     }
   });
   if (typeof module != 'undefined' && module !== null) {
-    module.exports = ffmpeg;
+    module.exports = h264;
   } else if (typeof window != 'undefined' && window !== null) {
-    window.ffmpeg = ffmpeg;
+    window.h264 = h264;
   }
   function import$(obj, src){
     var own = {}.hasOwnProperty;
