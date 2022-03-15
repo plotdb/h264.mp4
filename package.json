@@ -1,6 +1,6 @@
 {
   "name": "@plotdb/h264.mp4",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "browser": "dist/index.min.js",
   "main": "dist/index.min.js",
