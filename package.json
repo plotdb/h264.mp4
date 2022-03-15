@@ -2,13 +2,17 @@
   "name": "@plotdb/h264.mp4",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "browser": "dist/index.min.js",
+  "main": "dist/index.min.js",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "start": "npx server -r web -o true"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "zbryikt",
+  "license": "MIT",
   "frontendDependencies": {
     "root": "web/static/assets/lib",
     "modules": [
